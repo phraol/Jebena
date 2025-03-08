@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jebena Coffee Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3C2F2F 0%, #6B4E31 100%); /* Coffee Brown to Lighter Brown */
+            color: #EDE4E0; /* Soft Cream */
+            line-height: 1.6;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 3rem 2rem;
+            background: rgba(34, 28, 28, 0.9); /* Dark Brown with Transparency */
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(212, 163, 115, 0.3); /* Gold with opacity */
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #D4A373; /* Warm Gold */
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #D4A373; /* Warm Gold */
+            margin-top: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #EDE4E0; /* Soft Cream */
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #6B705C; /* Muted Olive Green */
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #EDE4E0; /* Soft Cream */
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .menu-item {
+            background: rgba(212, 163, 115, 0.1); /* Light Gold Tint */
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 163, 115, 0.2); /* Gold Border */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            background: rgba(107, 112, 92, 0.2); /* Olive Green Tint */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-item h3 {
+            color: #D4A373; /* Warm Gold */
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            color: #EDE4E0; /* Soft Cream */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(212, 163, 115, 0.3); /* Gold Border */
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.95rem;
+            margin-top: 3rem;
+            color: #D4A373; /* Warm Gold */
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212, 163, 115, 0.3); /* Gold with opacity */
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .container { padding: 1.5rem; margin: 1rem; }
+            header img { width: 100px; height: 100px; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Image 1: Coffee Shop Logo (Pixabay) -->
+            <img src="https://cdn.pixabay.com/photo/2022/10/10/17/03/coffee-7511758_1280.png" alt="Jebena Coffee Shop Logo">
+            <h1>Jebena Coffee Shop</h1>
+        </header>
+
+        <div class="section">
+            <h2>Welcome</h2>
+            <p>Step into Jebena Coffee Shop, where the soul of Ethiopian coffee meets modern elegance. Savor authentic "Buna" brewed in traditional Jebena pots, crafted with passion and served with warmth.</p>
+            <!-- Image 2: Coffee Shop Interior (Unsplash) -->
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jebena Coffee Shop Interior">
+        </div>
+
+        <div class="section">
+            <h2>Our Menu</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <h3>Ethiopian Buna</h3>
+                    <p>Traditional coffee brewed in a Jebena - $4.50</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Spiced Coffee</h3>
+                    <p>Buna with cardamom and cinnamon - $5.00</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Coffee & Popcorn</h3>
+                    <p>Classic combo with roasted popcorn - $6.00</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Ethiopian Tea</h3>
+                    <p>Herbal tea blend - $3.50</p>
+                </div>
+            </div>
+            <!-- Image 3: Coffee Being Served (Pexels) -->
+            <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Serving coffee from Jebena">
+        </div>
+
+        <div class="section">
+            <h2>Visit Us</h2>
+            <p>123 Coffee Lane, Addis Ababa Way, Ethiopia Town<br>
+            Open Daily: 7 AM - 8 PM<br>
+            Email: info@jebenacoffee.com | Phone: (555) 123-4567</p>
+            <!-- Image 4: Jebena Pot Brewing (Unsplash) -->
+            <img src="https://images.unsplash.com/photo-1608906111286-e1781fb14e62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jebena pot brewing coffee">
+        </div>
+
+        <p class="footer">Jebena Coffee Shop - Bringing Ethiopia's Finest to You | March 08, 2025</p>
+    </div>
+</body>
+</html>
